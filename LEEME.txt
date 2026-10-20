@@ -1,0 +1,46 @@
+IA + DESARROLLO — Cómo abrir la página
+=====================================
+
+1. Entra a esta carpeta: IA-Desarrollo
+2. Haz doble clic en: index.html
+   Se abre en tu navegador (Chrome / Edge recomendado).
+
+No necesitas instalar nada. Todo funciona sin internet
+(las fuentes de Google mejoran si hay conexión, pero no son obligatorias).
+
+Secciones:
+  Intro RPG (Tigre conoce a la IA, siempre al entrar) ·
+  Inicio · ¿Qué está pasando? (glosario) · Herramientas ·
+  IA como compañero (comparador sin/con IA) ·
+  ¿La IA puede hacerlo todo? · El desarrollador del futuro ·
+  Tu guía práctica (constructor de prompts, anatomía del prompt,
+  mitos vs realidad, reglas de oro, elige tu proyecto,
+  ruta de 5 pasos, dudas frecuentes y recompensa final (juguete))
+Interludios: 3 escenas de diálogo rejugables entre Tigre y la IA.
+
+Estructura:
+  /index.html
+  /css/style.css
+  /js/main.js   (animaciones, sonido WebAudio, progreso, easter eggs,
+                 constructor de prompts, vistas previas jugables,
+                 checklist de la guía y robot arrastrable)
+  /js/story.js  (intro RPG, diálogos Tigre/IA y música ambiental)
+  /assets/cast/ (Tigre y la IA recortados, de tu carpeta IA,TIGRE,FONDO)
+  /assets/img/  (fondo-nave.jpg para los diálogos)
+  /assets/      (sprites reservados para el futuro juego)
+
+Secretos:
+- Haz clic 5 veces en Pixel, el personaje de la portada.
+- Prueba el código Konami: ↑↑↓↓←→←→ B A
+- El sonido se genera con Web Audio API, sin archivos ni copyright.
+- Botón "Sonido ON/OFF" arriba a la derecha.
+- Botón "Noche/Día" arriba a la derecha: cambia toda la página a modo oscuro. Se recuerda tu elección.
+
+Progreso:
+- Cada vez que recargas la página, el progreso se reinicia a 0% y la
+  checklist de la ruta vuelve a estar vacía. Así siempre se puede
+  repetir la experiencia completa desde el principio.
+- Lo que sí se recuerda: el sonido (on/off), el modo día/noche y la
+  posición en la que dejaste al robot. Son preferencias, no avance.
+
+¡Disfruta explorar!

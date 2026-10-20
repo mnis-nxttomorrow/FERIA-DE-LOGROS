@@ -1,0 +1,11 @@
+# Archivos fuente que NO pertenecen a la web publicada
+# (son los originales grandes: IA.jpg, TIGRE.jpg, FONDO.jpg, MUSICA/FONDO.mp3)
+IA,TIGRE,FONDO/
+
+# Ruido del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporal
+*.log

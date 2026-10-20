@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IA + Desarrollo — Aprender, crear y programar</title>
+<meta name="description" content="Una experiencia interactiva para entender cómo la IA ayuda a programar. Sin tecnicismos, con guía práctica incluida." />
+<meta property="og:title" content="IA + DESARROLLO — cómo la IA está cambiando la forma de programar" />
+<meta property="og:description" content="Una guía interactiva y sin tecnicismos para entender la IA en el desarrollo de software." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/img/selfie.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#FFF9EF" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23FFF9EF'/><rect x='3' y='3' width='10' height='7' fill='%23232027'/><rect x='5' y='5' width='2' height='2' fill='%23FFC94D'/><rect x='9' y='5' width='2' height='2' fill='%237C3AED'/><rect x='6' y='11' width='4' height='2' fill='%23E84A8A'/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css?v=2" />
+</head>
+<body>
+
+<!-- INTRO RPG -->
+<div class="intro" id="intro" role="dialog" aria-label="Intro: Tigre conoce a la IA">
+  <div class="intro-top"><span class="intro-brand">IA<b>+</b>DEV presenta…</span><button class="btn-small" id="btnSkipIntro">Saltar intro</button></div>
+  <div class="intro-stage" id="introStage"></div>
+</div>
+
+<!-- Barra de progreso fina -->
+<div class="progress-line" aria-hidden="true"><span id="progressLineFill"></span></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="#inicio" data-sound="hover">
+    <span class="brand-pixel" aria-hidden="true"></span>
+    <span class="brand-text">IA<b>+</b>DEV</span>
+    <span class="brand-tag">cuaderno interactivo</span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#inicio" class="active">Inicio</a>
+    <a href="#que-pasa">IA</a>
+    <a href="#herramientas">Herramientas</a>
+    <a href="#companero">Programación</a>
+    <a href="#futuro">Aprender</a>
+    <a href="#guia">Guía</a>
+  </nav>
+  <div class="nav-right">
+    <div class="mini-progress" title="Tu avance en la experiencia"><span class="dot"></span><span id="miniProgressLabel">Progreso 0%</span></div>
+    <button id="soundToggle" class="sound-btn" aria-pressed="true" title="Activar / silenciar sonido">♪ <span>Sonido ON</span></button>
+    <button id="themeToggle" class="sound-btn theme-btn" aria-pressed="false" title="Cambiar a modo noche">☾ <span>Noche</span></button>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<main>
+<!-- ============ PORTADA ============ -->
+<section id="inicio" class="hero section" data-progress="5">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="kicker reveal"><span class="pixel-star" aria-hidden="true">✦</span> Una guía amable para curiosos del código</p>
+      <h1 class="reveal">IA +<br/>DESARROLLO</h1>
+      <p class="subtitle reveal">¿Cómo está cambiando la inteligencia artificial la forma en que programamos?</p>
+      <p class="lede reveal">La inteligencia artificial no reemplaza la creatividad del desarrollador. Puede convertirse en una herramienta para <b>aprender, experimentar, resolver problemas</b> y crear software.</p>
+      <div class="hero-cta reveal">
+        <button class="btn-primary" id="btnComenzar">Comenzar <span class="btn-arrow" aria-hidden="true">↓</span></button>
+        <a class="btn-ghost" href="#guia">Ir a la guía práctica</a>
+      </div>
+      <p class="hero-note reveal"><span class="kbd">tip</span> explora con calma · hay sonidos suaves · hay secretos escondidos · dura ~10 min + guía práctica</p>
+    </div>
+
+    <div class="hero-stage reveal">
+      <div class="desk-card" id="deskCard">
+        <img class="selfie" src="assets/img/selfie.jpg?v=2" alt="Selfie de Tigre y la IA juntos" />
+        <div class="desk-footer">
+          <span class="pill"><i class="sq"></i> html · css · js</span>
+          <span class="pill pill2">hecho a mano, sin plantilla</span>
+        </div>
+      </div>
+      <p class="caption">Tigre y la IA, listos para aprender a programar juntos.</p>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span></span>desliza</div>
+</section>
+
+<!-- ============ QUE ESTA PASANDO ============ -->
+<section id="que-pasa" class="section soft" data-progress="20">
+  <div class="wrap">
+    <p class="kicker reveal">01 · ¿Qué está pasando?</p>
+    <h2 class="reveal">Programar ya no es hacerlo todo a mano</h2>
+    <p class="section-lede reveal">Imagina que aprendes a cocinar y alguien te ayuda a picar, a probar y a ordenar la receta. Eso hace hoy la IA con el código. <b>Pasa el cursor por cada tarjeta</b> para verlo en acción.</p>
+
+    <div class="cards-grid" id="conceptGrid">
+      <article class="card reveal" tabindex="0"><div class="icon"><span class="cicon c1">◉</span></div><h3>Escribir código con ayuda</h3><p>Le describes lo que quieres y te propone un primer borrador.</p><span class="card-more">ej: “haz un botón que guarde mi nombre” →</span></article>
+      <article class="card reveal" tabindex="0"><div class="icon"><span class="cicon c2">▲</span></div><h3>Encontrar errores</h3><p>Pegas tu error y te explica dónde mirar, en palabras simples.</p><span class="card-more">“¿por qué mi contador no sube?” →</span></article>
+      <article class="card reveal" tabindex="0"><div class="icon"><span class="cicon c3">●</span></div><h3>Aprender un lenguaje</h3><p>Te explica línea por línea, como un tutor paciente.</p><span class="card-more">traduce Python → JavaScript contigo →</span></article>
+      <article class="card reveal" tabindex="0"><div class="icon"><span class="cicon c4">◆</span></div><h3>Generar ideas</h3><p>Te da 5 formas de hacer lo mismo para que elijas.</p><span class="card-more">“dame ideas para mi juego” →</span></article>
+      <article class="card reveal" tabindex="0"><div class="icon"><span class="cicon c5">■</span></div><h3>Documentar</h3><p>Convierte código confuso en una explicación clara.</p><span class="card-more">auto-comentarios legibles →</span></article>
+      <article class="card reveal" tabindex="0"><div class="icon"><span class="cicon c6">✚</span></div><h3>Crear prototipos</h3><p>En minutos tienes algo clicable para probar.</p><span class="card-more">de idea a demo en una tarde →</span></article>
+      <article class="card reveal" tabindex="0"><div class="icon"><span class="cicon c7">★</span></div><h3>Aprender más rápido</h3><p>Preguntas sin vergüenza, a tu ritmo, 24/7.</p><span class="card-more">repregunta hasta entender →</span></article>
+      <article class="card reveal" tabindex="0"><div class="icon"><span class="cicon c8">✦</span></div><h3>Explicar código difícil</h3><p>Ese archivo de 200 líneas por fin tiene sentido.</p><span class="card-more">“explícamelo como si tuviera 12” →</span></article>
+    </div>
+    <div class="check-row reveal"><span class="check" id="checkConcepts">○</span><p>Has explorado <b id="conceptCount">0/8</b> ideas. Pasa por todas para desbloquear el avance.</p></div>
+    <div class="glossary reveal">
+      <h3><span class="h-glyph g1">▮</span> Habla el idioma: 6 palabras</h3>
+      <p>Si entiendes estas, entiendes casi todo lo que se dice sobre IA:</p>
+      <div class="gloss-chips" id="glossChips">
+        <button data-g="prompt">prompt</button>
+        <button data-g="modelo">modelo</button>
+        <button data-g="alucinacion">alucinación</button>
+        <button data-g="token">token</button>
+        <button data-g="dataset">dataset</button>
+        <button data-g="depurar">depurar</button>
+      </div>
+      <p class="gloss-def" id="glossDef">Toca una palabra para ver qué significa, sin tecnicismos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERRAMIENTAS ============ -->
+<div class="rpg" data-scene="s1"></div>
+<section id="herramientas" class="section" data-progress="40">
+  <div class="wrap">
+    <p class="kicker reveal">02 · Las nuevas herramientas</p>
+    <h2 class="reveal">No son magia. Son compañeros distintos.</h2>
+    <p class="section-lede reveal">Toca cada herramienta para ver <b>qué hace bien y cuándo usarla</b>. Esto no es publicidad: todas se equivocan y siempre debes revisar.</p>
+
+    <div class="tools">
+      <div class="tool-tabs reveal" role="tablist">
+        <button class="tab active" data-tool="chatgpt">ChatGPT</button>
+        <button class="tab" data-tool="claude">Claude</button>
+        <button class="tab" data-tool="gemini">Gemini</button>
+        <button class="tab" data-tool="deepseek">DeepSeek</button>
+        <button class="tab" data-tool="copilot">Copilot</button>
+      </div>
+      <div class="tool-panel reveal" id="toolPanel">
+        <div class="tool-illus" id="toolIllus" aria-hidden="true">✦</div>
+        <div>
+          <h3 id="toolName">ChatGPT</h3>
+          <p id="toolDesc">Para aprender, explicar código, generar ideas, depurar y crear prototipos rápidos.</p>
+          <ul class="tool-list" id="toolList"></ul>
+          <p class="tool-when" id="toolWhen"></p>
+        </div>
+      </div>
+      <p class="disclaimer reveal"><span class="warn-badge">!</span> <b>Ninguna IA es perfecta.</b> Revisa siempre lo que genera: prueba el código, lee la explicación y decide tú.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPAÑERO ============ -->
+<section id="companero" class="section soft" data-progress="55">
+  <div class="wrap split">
+    <div>
+      <p class="kicker reveal">03 · IA como compañero</p>
+      <h2 class="reveal">Mira cómo te ayuda en la práctica</h2>
+      <p class="section-lede reveal">Este contador tiene un error pequeñito. Pulsa <b>“Pedir ayuda a la IA”</b> y mira lo que pasa.</p>
+      <ol class="steps reveal">
+        <li><b>1.</b> Lee el código e intenta adivinar el error.</li>
+        <li><b>2.</b> Pide ayuda y observa cómo “piensa”.</li>
+        <li><b>3.</b> Aplica la corrección y prueba el resultado.</li>
+      </ol>
+      <div class="try-box reveal">
+        <button class="btn-small" id="btnTryCounter">Probar el contador roto</button>
+        <span id="tryResult">clics: 0 (debería subir de 1 en 1… ¿o no?)</span>
+      </div>
+    </div>
+    <div class="editor-card reveal">
+      <div class="editor-bar"><i></i><i></i><i></i><span>contador.js — tu proyecto</span></div>
+<pre class="code" id="codeBlock"><code><span class="ln">1</span> <span class="kw">let</span> puntos = <span class="num">0</span>;
+<span class="ln">2</span> <span class="kw">function</span> <span class="fn">sumar</span>() {
+<span class="ln">3</span>   puntos = puntos + <span class="num err">2</span>; <span class="cm">// ← sospechoso</span>
+<span class="ln">4</span>   mostrar(puntos);
+<span class="ln">5</span> }</code></pre>
+      <button class="btn-primary btn-ai" id="btnAskAI"><span class="ai-dot"></span> Pedir ayuda a la IA</button>
+      <div class="ai-thinking" id="aiThinking" hidden>
+        <div class="pixel-loader" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p><b>Pixel-IA</b> está analizando… <span id="thinkStep">leyendo líneas</span></p>
+      </div>
+      <div class="ai-answer" id="aiAnswer" hidden>
+        <div class="ai-head"><img class="robo-mini" src="assets/cast/ia-celebra.png?v=2" alt="" aria-hidden="true" /><b>IA:</b><span class="tag-ok">1 posible problema</span></div>
+        <p>“Encontré un posible problema en la <b>línea 3</b>. Sumas <code>+2</code> cada vez, por eso el marcador salta de 2 en 2. Si quieres que suba de 1 en 1, cambia ese <code>2</code> por <code>1</code>.”</p>
+        <button class="btn-small btn-fix" id="btnFix">Aplicar corrección</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="versus reveal">
+      <h3><span class="h-glyph g2">▮</span> La misma tarea, dos mundos</h3>
+      <p>Hacer un botón que salude al pulsarlo. Cambia el interruptor:</p>
+      <div class="versus-toggle" role="tablist">
+        <button class="tab active" data-mode="sin">Sin IA</button>
+        <button class="tab" data-mode="con">Con IA</button>
+      </div>
+      <div class="versus-panel" id="versusPanel">
+        <ol id="versusSteps"></ol>
+        <div class="versus-time"><span id="versusLabel"></span><div class="versus-track"><i id="versusBar"></i></div></div>
+        <p class="versus-note" id="versusNote"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESCONFIAR ============ -->
+<div class="rpg" data-scene="s2"></div>
+<section id="desconfiar" class="section" data-progress="70">
+  <div class="wrap">
+    <p class="kicker reveal">04 · Pero… ¿la IA puede hacerlo todo?</p>
+    <h2 class="reveal">No. Y eso también hay que aprenderlo.</h2>
+    <p class="section-lede reveal">Juguemos a <b>“¿Confiarías en este código?”</b>. No es un examen: mira el ejemplo, decide con tu instinto y luego descubre la trampa.</p>
+    <div class="trust-card reveal">
+      <div class="trust-top"><span class="pill danger">caso 1 / 3</span><span class="pill" id="trustScore">intuición: —</span></div>
+<pre class="code"><code><span class="cm">// La IA generó este login “rápido”</span>
+<span class="kw">function</span> <span class="fn">entrar</span>(user, pass) {
+  <span class="kw">if</span> (pass == <span class="str">"1234"</span>) <span class="kw">return</span> <span class="num">true</span>;
+  <span class="kw">return</span> <span class="fn">revisarEnServidor</span>(user, pass);
+}</code></pre>
+      <p class="trust-q">¿Confiarías en este código para tu app de verdad?</p>
+      <div class="trust-btns">
+        <button class="btn-ghost" id="btnTrustYes">Sí, parece que funciona</button>
+        <button class="btn-primary" id="btnTrustNo">Mmm, algo no me cuadra</button>
+      </div>
+      <div class="trust-out" id="trustOut" hidden></div>
+      <div class="trust-nav"><button class="btn-small" id="btnTrustNext" hidden>Siguiente trampa →</button></div>
+    </div>
+    <div class="warn-grid">
+      <div class="warn reveal"><span class="warn-glyph m1">◆</span> <b>Puede inventar.</b><span>Te responde con seguridad aunque el dato sea falso.</span></div>
+      <div class="warn reveal"><span class="warn-glyph m2">▲</span> <b>Código inseguro.</b><span>Funciona, pero deja puertas abiertas.</span></div>
+      <div class="warn reveal"><span class="warn-glyph m3">●</span> <b>Te malinterpreta.</b><span>Entendió otra cosa y ni avisó.</span></div>
+      <div class="warn reveal"><span class="warn-glyph m4">■</span> <b>Mal diseñado.</b><span>Anda, pero será un lío mantenerlo.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUTURO ============ -->
+<section id="futuro" class="section soft" data-progress="85">
+  <div class="wrap">
+    <p class="kicker reveal">05 · El desarrollador del futuro</p>
+    <h2 class="reveal">La IA escribe. Tú decides qué vale la pena construir.</h2>
+    <div class="timeline reveal" id="timeline">
+      <div class="t-track"><span class="t-fill" id="tFill"></span></div>
+      <div class="t-steps">
+        <button class="t-step active" data-era="antes"><b>Antes</b><span>Escribir todo manualmente.</span></button>
+        <button class="t-step" data-era="ahora"><b>Ahora</b><span>Escribir + investigar + usar IA + revisar.</span></button>
+        <button class="t-step" data-era="futuro"><b>Futuro</b><span>Pensar + diseñar + dirigir + crear.</span></button>
+      </div>
+      <p class="t-text" id="tText">Antes: pasabas horas con sintaxis. Cada punto y coma era una batalla.</p>
+    </div>
+    <blockquote class="big-quote reveal">“La IA puede escribir código,<br/>pero el <mark>desarrollador decide qué construir</mark> y cómo hacerlo.”</blockquote>
+  </div>
+</section>
+
+<!-- ============ GUÍA PRÁCTICA ============ -->
+<div class="rpg" data-scene="s3"></div>
+<section id="guia" class="section soft" data-progress="100">
+  <div class="wrap">
+    <p class="kicker reveal">06 · Tu guía práctica</p>
+    <h2 class="reveal">Ya entiendes la idea. Ahora úsala bien.</h2>
+    <p class="section-lede reveal">Esta es la parte más útil de todo el cuaderno: cómo hablarle a la IA para que te ayude de verdad, qué creencias soltar y por dónde empezar hoy mismo.</p>
+
+    <aside class="pixel-guide reveal" id="pixelGuide" aria-label="Pixel te acompaña">
+      <img class="pg-img" src="assets/cast/ia-saluda.png?v=2" alt="" aria-hidden="true" />
+      <p class="pg-speech" id="pgSpeech">¡Llegaste a mi parte favorita! Aquí se aprende de verdad.</p>
+    </aside>
+
+    <!-- Constructor de prompts -->
+    <div class="guide-block reveal" data-say="Un buen prompt es medio hechizo. Prueba combinar las opciones.">
+      <p class="step-pill">paso 1 · pide</p>
+      <h3><span class="h-glyph g1">▮</span> Arma un buen prompt</h3>
+      <p>La IA responde mejor cuando preguntas bien. Elige tu caso y copia el ejemplo:</p>
+      <div class="prompt-builder">
+        <div class="pb-row">
+          <label for="pbTask">Quiero…</label>
+          <select id="pbTask">
+            <option value="explicar">entender un código</option>
+            <option value="error">arreglar un error</option>
+            <option value="empezar">empezar un mini-proyecto</option>
+            <option value="mejorar">mejorar mi código</option>
+          </select>
+        </div>
+        <div class="pb-row">
+          <label for="pbLevel">Mi nivel es…</label>
+          <select id="pbLevel">
+            <option value="nuevo">estoy empezando</option>
+            <option value="algo">ya programo un poco</option>
+          </select>
+        </div>
+        <div class="prompt-out">
+          <p class="prompt-label">Prueba con algo así:</p>
+          <p id="promptText"></p>
+          <button class="btn-small" id="btnCopyPrompt">Copiar prompt</button>
+        </div>
+        <p class="prompt-tip" id="promptTip"></p>
+      </div>
+    </div>
+
+    <div class="pixel-div" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <!-- Anatomía de un buen prompt -->
+    <div class="guide-block reveal" data-say="Cada color es un ingrediente. Tócalos uno por uno.">
+      <p class="step-pill">paso 2 · desarma</p>
+      <h3><span class="h-glyph g2">▮</span> Anatomía de un buen prompt</h3>
+      <p>Un prompt fuerte tiene 4 partes. Toca cada color para entenderla:</p>
+      <p class="anatomy" id="anatomy">
+        <button class="ana ana-rol" data-a="rol">Actúa como un tutor paciente de Python.</button>
+        <button class="ana ana-ctx" data-a="ctx">Estoy en mi primera semana y ya sé qué es una variable.</button>
+        <button class="ana ana-task" data-a="task">Explícame este bucle línea por línea.</button>
+        <button class="ana ana-fmt" data-a="fmt">Cierra con un ejemplo de la vida real.</button>
+      </p>
+      <p class="anatomy-out" id="anatomyOut">Elige una parte de arriba y te digo para qué sirve.</p>
+    </div>
+
+    <div class="pixel-div" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <!-- Mitos vs realidad -->
+    <div class="guide-block reveal" data-say="A mí también me creían infalible. Voltéalas todas.">
+      <p class="step-pill">paso 3 · cuestiona</p>
+      <h3><span class="h-glyph g2">▮</span> Mitos vs realidad</h3>
+      <p>Toca cada tarjeta para voltearla:</p>
+      <div class="myth-grid">
+        <button class="myth" aria-label="Voltear mito"><span class="myth-front"><span class="myth-glyph m1">◉</span><b>“La IA siempre tiene razón”</b></span><span class="myth-back">Se equivoca y lo dice con seguridad. Verifica siempre.</span></button>
+        <button class="myth" aria-label="Voltear mito"><span class="myth-front"><span class="myth-glyph m2">▲</span><b>“La IA te quitará el trabajo”</b></span><span class="myth-back">Cambia el trabajo: quien sabe dirigirla vale más.</span></button>
+        <button class="myth" aria-label="Voltear mito"><span class="myth-front"><span class="myth-glyph m3">●</span><b>“Solo sirve si ya sabes programar”</b></span><span class="myth-back">También enseña desde cero si preguntas paso a paso.</span></button>
+        <button class="myth" aria-label="Voltear mito"><span class="myth-front"><span class="myth-glyph m4">■</span><b>“Hay que copiar lo que genere”</b></span><span class="myth-back">Úsalo como borrador: lee, prueba y mejora.</span></button>
+      </div>
+    </div>
+
+    <div class="pixel-div" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <!-- Reglas de oro -->
+    <div class="guide-block reveal" data-say="La segunda lista vale oro. Guárdala en la memoria.">
+      <p class="step-pill">paso 4 · apunta</p>
+      <h3><span class="h-glyph g3">▮</span> Reglas de oro</h3>
+      <div class="rules-grid">
+        <ul class="rules do">
+          <li><b>Haz esto</b></li>
+          <li><i class="rk yes">✓</i> Pide que te explique el <i>por qué</i>, no solo el código.</li>
+          <li><i class="rk yes">✓</i> Prueba todo lo que genere antes de usarlo.</li>
+          <li><i class="rk yes">✓</i> Empieza por algo pequeño y creíble.</li>
+          <li><i class="rk yes">✓</i> Repregunta hasta entender de verdad.</li>
+        </ul>
+        <ul class="rules dont">
+          <li><b>Evita esto</b></li>
+          <li><i class="rk no">✕</i> Pegar contraseñas o datos privados.</li>
+          <li><i class="rk no">✕</i> Entregar algo sin haberlo leído.</li>
+          <li><i class="rk no">✕</i> Creer ciegamente la primera respuesta.</li>
+          <li><i class="rk no">✕</i> Usarla para no aprender nada.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pixel-div" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <!-- Qué quieres construir -->
+    <div class="guide-block reveal" data-say="¿Juego, web o app? Elige y te armo el plan.">
+      <p class="step-pill">paso 5 · elige</p>
+      <h3><span class="h-glyph g3">▮</span> ¿Qué quieres construir?</h3>
+      <p>Elige tu destino y te doy el plan en 3 pasos más tu primer prompt:</p>
+      <div class="proj-pick" id="projPick" role="tablist">
+        <button class="tab active" data-proj="juego">Juego</button>
+        <button class="tab" data-proj="web">Página web</button>
+        <button class="tab" data-proj="app">App de lista</button>
+      </div>
+      <ol class="proj-plan" id="projPlan"></ol>
+      <div class="prompt-out">
+        <p class="prompt-label">Tu primer prompt:</p>
+        <p id="projPrompt"></p>
+        <button class="btn-small" id="btnCopyProj">Copiar prompt</button>
+      </div>
+      <p class="prompt-tip" id="projTip"></p>
+      <div class="preview-actions">
+        <button class="btn-small btn-preview" id="btnPreview">Ver vista previa</button>
+      </div>
+      <div class="preview-stage" id="previewStage" hidden>
+        <div class="preview-bar"><b id="previewTitle">Vista previa</b><button class="btn-small" id="btnClosePreview">Cerrar</button></div>
+        <div class="preview-body" id="previewBody"></div>
+        <p class="preview-hint" id="previewHint"></p>
+      </div>
+    </div>
+
+    <div class="pixel-div" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <!-- Tu ruta -->
+    <div class="guide-block reveal" data-say="Paso a paso, sin prisa. Yo marco contigo.">
+      <p class="step-pill">paso 6 · avanza</p>
+      <h3><span class="h-glyph g4">▮</span> Tu ruta: 5 pasos</h3>
+      <p>Márcalos a tu ritmo, se guardan en tu navegador. <b id="routeCount">0/5</b></p>
+      <ol class="route-list" id="routeList">
+        <li><label><input type="checkbox" data-route="0" /> Elige un lenguaje amable: Python o JavaScript.</label></li>
+        <li><label><input type="checkbox" data-route="1" /> Haz un mini-proyecto: calculadora o lista de tareas.</label></li>
+        <li><label><input type="checkbox" data-route="2" /> Pide a la IA que te explique cada línea.</label></li>
+        <li><label><input type="checkbox" data-route="3" /> Rompe el código a propósito… y arréglalo.</label></li>
+        <li><label><input type="checkbox" data-route="4" /> Muéstrale lo que hiciste a alguien.</label></li>
+      </ol>
+      <p class="route-done" id="routeDone" hidden>¡Ruta completa! Ya piensas como desarrollador: la IA escribe, <b>tú decides</b>.</p>
+    </div>
+
+    <div class="pixel-div" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <!-- Dudas -->
+    <div class="guide-block reveal" data-say="Preguntas de verdad, respuestas de verdad.">
+      <p class="step-pill">paso 7 · resuelve</p>
+      <h3><span class="h-glyph g4">▮</span> Dudas que todos tienen</h3>
+      <div class="faq" id="faq">
+        <button class="faq-q">¿Usar IA es hacer trampa?<span class="faq-x">+</span></button>
+        <div class="faq-a"><p>No, si aprendes en el proceso. Es trampa si entregas algo que no entiendes. La regla de oro: debes poder explicar lo que entregas.</p></div>
+        <button class="faq-q">¿Cuál herramienta uso?<span class="faq-x">+</span></button>
+        <div class="faq-a"><p>La que tengas a mano. Para aprender, cualquiera de la sección 02 sirve. Cambia de herramienta solo si te atascas con una.</p></div>
+        <button class="faq-q">¿Necesito saber inglés?<span class="faq-x">+</span></button>
+        <div class="faq-a"><p>Ayuda, pero no es obligatorio. Puedes aprender todo en español: pídele “respóndeme en español, por favor”.</p></div>
+        <button class="faq-q">¿Y si me equivoco todo el tiempo?<span class="faq-x">+</span></button>
+        <div class="faq-a"><p>Equivocarse es el plan. Cada error que arreglas con ayuda te deja una lección. Quienes programan bien se equivocan a diario.</p></div>
+        <button class="faq-q">¿La IA me va a reemplazar?<span class="faq-x">+</span></button>
+        <div class="faq-a"><p>No: alguien debe decidir qué construir y revisar el resultado. Eso que practicaste en esta página ya es el trabajo del futuro.</p></div>
+      </div>
+    </div>
+
+    <div class="pixel-div" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <!-- Recompensa -->
+    <div class="guide-block reveal" data-say="Llegaste al final. Tu recompensa te espera.">
+      <h3><span class="h-glyph g1">▮</span> Tu recompensa</h3>
+      <p>Completaste el cuaderno. Tigre y la IA te guardaron algo:</p>
+      <div class="diploma-row">
+        <button class="btn-small" id="btnJuguete">Revelar mi recompensa</button>
+      </div>
+      <div class="diploma-out" id="jugueteOut" hidden>
+        <img src="assets/img/juguete.jpg?v=2" alt="Juguete de Tigre como recompensa" />
+        <p class="route-done">¡Es tuyo! Un recuerdo de tu primera misión como desarrollador: la IA escribe, <b>tú decides</b>.</p>
+      </div>
+    </div>
+
+    <div class="pixel-div" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <blockquote class="big-quote reveal">“La IA no reemplaza al desarrollador.<br/>Lo ayuda a <mark>construir más rápido</mark>, aprender más y experimentar.”</blockquote>
+
+    <div class="complete reveal" id="completeBanner" hidden>
+      <span class="confetti" aria-hidden="true"></span>
+      <p><b>HAS COMPLETADO LA EXPERIENCIA</b><br/>Exploraste todo el cuaderno. Ahora a construir.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-grid">
+    <p><b>IA+DEV</b> — un cuaderno hecho a mano con HTML, CSS y JS. Sin plantillas, sin neón, con cariño pixelado.</p>
+    <p class="foot-small">Sonidos generados con Web Audio API · Progreso guardado en tu navegador · <button class="foot-link" id="btnReIntro">Ver la intro otra vez</button> · Pista: prueba el código Konami ↑↑↓↓←→←→BA</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+<div class="bit" id="bit" data-mood="curious">
+  <p class="bit-bubble" id="bitBubble">¡Hola! Soy <b>IA</b>. Te acompaño en todo el camino.</p>
+  <button class="bit-bot" id="bitBot" aria-label="Pedir un consejo a la IA">
+    <img id="bitImg" src="assets/cast/ia-saluda.png?v=2" alt="IA, robot rojo" />
+  </button>
+</div>
+<nav class="side-dots" id="sideDots" aria-label="Ir a sección">
+  <a href="#inicio" data-sec="inicio" title="Inicio" class="active"><i></i></a>
+  <a href="#que-pasa" data-sec="que-pasa" title="IA"><i></i></a>
+  <a href="#herramientas" data-sec="herramientas" title="Herramientas"><i></i></a>
+  <a href="#companero" data-sec="companero" title="Programación"><i></i></a>
+  <a href="#futuro" data-sec="futuro" title="Futuro"><i></i></a>
+  <a href="#guia" data-sec="guia" title="Guía"><i></i></a>
+</nav>
+
+<script src="js/main.js?v=2"></script>
+<script src="js/story.js?v=2"></script>
+</body>
+</html>
