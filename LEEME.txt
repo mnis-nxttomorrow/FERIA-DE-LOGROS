@@ -44,3 +44,14 @@ Progreso:
   posición en la que dejaste al robot. Son preferencias, no avance.
 
 ¡Disfruta explorar!
+
+PUBLICADO EN GITHUB PAGES
+=========================
+  Web IA + DESARROLLO : https://mnis-nxttomorrow.github.io/FERIA-DE-LOGROS/
+  Manual de juegos    : https://mnis-nxttomorrow.github.io/FERIA-DE-LOGROS/reglas/
+
+  Repositorio: https://github.com/mnis-nxttomorrow/FERIA-DE-LOGROS
+  (si cambias algo, sube con:  git add -A ; git commit -m "mensaje" ; git push)
+
+  La carpeta IA,TIGRE,FONDO no se sube al repo: son los archivos
+  fuente originales. Los recortes ya optimizados estan en assets/cast.
