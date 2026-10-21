@@ -65,6 +65,9 @@ p code, li code, .section-lede code, .tool-when code, .ai-answer code{font-famil
 .nav-links a{text-decoration:none;font-size:.9rem;font-weight:600;padding:8px 12px;border-radius:999px;color:var(--muted)}
 .nav-links a:hover{background:var(--purple-soft);color:var(--ink)}
 .nav-links a.active{background:var(--ink);color:#fff}
+.nav-games{border:1.5px solid var(--fuchsia)!important;color:var(--fuchsia)!important;font-weight:700}
+.nav-games:hover{background:var(--fuchsia)!important;color:#fff!important}
+body.noche .nav-games{border-color:#ff9dc4!important;color:#ff9dc4!important}
 .nav-right{display:flex;align-items:center;gap:8px}
 .mini-progress{font-size:.78rem;font-weight:600;border:1.5px dashed var(--line);border-radius:999px;padding:5px 10px;background:#fff;display:flex;gap:6px;align-items:center;white-space:nowrap}
 .mini-progress .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px #d9f2e6}
